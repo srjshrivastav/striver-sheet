@@ -17,12 +17,53 @@ public class Triangle {
         printReverseNumberTiangle(n);
         System.out.println("\n");
         printEqTiangle(n);
+        System.out.println("\n");
+        printReverseEqTiangle(n);
+        System.out.println("\n");
+        printRhombus(n);
+    }
+
+    private static void printRhombus(int n) {
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n*2;j++){
+                if(j>= n -i && j<= n+i){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        for(int i=n-1;i>0;i--){
+            System.out.print(" ");
+            for(int j=0;j<=n*2;j++){
+                if(j>= n -i && j< n+i-1){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
     }
 
     private static void printEqTiangle(int n) {
         for(int i=0;i<n;i++){
             for(int j=0;j<n*2;j++){
                 if(j>= n -i && j<= n+i){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    private static void printReverseEqTiangle(int n) {
+        for(int i=n;i>0;i--){
+            for(int j=0;j<=n*2;j++){
+                if(j>= n -i && j< n+i-1){
                     System.out.print("*");
                 }else{
                     System.out.print(" ");
