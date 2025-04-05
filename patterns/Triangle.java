@@ -29,7 +29,10 @@ public class Triangle {
         printMShape(n);
         System.out.println("\n");
         printTriangleWithContinousNumber(n);
+        System.out.println("\n");
+        printSimpleCharTriangle(n);
     }
+
 
     private static void printTriangleWithContinousNumber(int n) {
         int k = 1;
@@ -38,10 +41,22 @@ public class Triangle {
             sb.setLength(0);
             for(int j=1;j<=i;j++){
                 sb.append(k++);
-                if(j < i)
+                if(j < i) //won't add extra space at end
                     sb.append(" ");
             }
             System.out.println(sb.toString());
+        }
+    }
+
+    private static void printSimpleCharTriangle(int n) {
+        for (int i = 0; i < n; i++) {
+            // Create a character array of size i + 1
+            char[] chars = new char[i + 1];
+            for (int j = 0; j <= i; j++) {
+                chars[j] = (char) ('A' + j);
+            }
+            // Print the characters as a string
+            System.out.println(new String(chars));
         }
     }
 
