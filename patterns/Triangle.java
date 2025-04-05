@@ -37,6 +37,8 @@ public class Triangle {
         printSimpleRevCharTriangle(n);
         System.out.println("\n");
         printSimpleTriangleWithRevCharOrder(n);
+        System.out.println("\n");
+        printCarEqTiangle(n);
     }
 
 
@@ -181,6 +183,26 @@ public class Triangle {
             for(int j=0;j<n*2;j++){
                 if(j>= n -i && j<= n+i){
                     System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    private static void printCarEqTiangle(int n) {
+        for(int i=0;i<n;i++){
+            char a = 'A';
+            for(int j=0;j<n*2;j++){
+                if(j>= n -i && j<= n+i){
+                    if(j<=n){
+                        System.out.print(a++);
+                        if(j==n) a--;
+                    }
+                    else{
+                        System.out.print(--a);
+                    }
                 }else{
                     System.out.print(" ");
                 }
