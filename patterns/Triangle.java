@@ -39,6 +39,8 @@ public class Triangle {
         printSimpleTriangleWithRevCharOrder(n);
         System.out.println("\n");
         printCarEqTiangle(n);
+        System.out.println("\n");
+        printHollowRhombus(n);
     }
 
 
@@ -156,6 +158,30 @@ public class Triangle {
                     System.out.print("*");
                 }else{
                     System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+
+    private static void printHollowRhombus(int n) {
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n*2;j++){
+                if(j>= n-i && j< n+i){
+                    System.out.print(" ");
+                }else{
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+        for(int i=n-1;i>0;i--){
+            for(int j=0;j<n*2;j++){
+                if(j> n-i && j<n+i-1){
+                    System.out.print(" ");
+                }else{
+                    System.out.print("*");
                 }
             }
             System.out.println();
