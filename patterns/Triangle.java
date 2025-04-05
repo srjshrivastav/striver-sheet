@@ -38,7 +38,8 @@ public class Triangle {
             sb.setLength(0);
             for(int j=1;j<=i;j++){
                 sb.append(k++);
-                sb.append(" ");
+                if(j < i)
+                    sb.append(" ");
             }
             System.out.println(sb.toString());
         }
