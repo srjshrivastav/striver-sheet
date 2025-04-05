@@ -21,6 +21,8 @@ public class Triangle {
         printReverseEqTiangle(n);
         System.out.println("\n");
         printRhombus(n);
+        System.out.println("\n");
+        printEqTriangleRotated(n);
     }
 
     private static void printRhombus(int n) {
@@ -42,6 +44,22 @@ public class Triangle {
                 }else{
                     System.out.print(" ");
                 }
+            }
+            System.out.println();
+        }
+    }
+
+
+    private static void printEqTriangleRotated(int n) {
+        for(int i=1;i<=n;i++){
+            for(int j=0;j<i;j++){
+                    System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i=n-1;i>0;i--){
+            for(int j=0;j<i;j++){
+                System.out.print("*");
             }
             System.out.println();
         }
