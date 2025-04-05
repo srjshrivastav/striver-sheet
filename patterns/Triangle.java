@@ -31,6 +31,12 @@ public class Triangle {
         printTriangleWithContinousNumber(n);
         System.out.println("\n");
         printSimpleCharTriangle(n);
+        System.out.println("\n");
+        printSimpleSameCharInRowTriangle(n);
+        System.out.println("\n");
+        printSimpleRevCharTriangle(n);
+        System.out.println("\n");
+        printSimpleTriangleWithRevCharOrder(n);
     }
 
 
@@ -53,6 +59,43 @@ public class Triangle {
             // Create a character array of size i + 1
             char[] chars = new char[i + 1];
             for (int j = 0; j <= i; j++) {
+                chars[j] = (char) ('A' + j);
+            }
+            // Print the characters as a string
+            System.out.println(new String(chars));
+        }
+    }
+
+    private static void printSimpleSameCharInRowTriangle(int n) {
+        for (int i = 0; i < n; i++) {
+            // Create a character array of size i + 1
+            char[] chars = new char[i + 1];
+            char c = (char) ('A' + i);
+            for (int j = 0; j <= i; j++) {
+                chars[j] = c;
+            }
+            // Print the characters as a string
+            System.out.println(new String(chars));
+        }
+    }
+
+    private static void printSimpleTriangleWithRevCharOrder(int n) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < n; i++) {
+            sb.setLength(0);
+            for (int j = 0; j <= i; j++) {
+                sb.append((char) ('A' + n - i + j - 1));
+                if(j < n) sb.append(" ");
+            }
+            System.out.println(sb.toString());
+        }
+    }
+
+    private static void printSimpleRevCharTriangle(int n) {
+        for (int i = n; i > 0; i--) {
+            // Create a character array of size i + 1
+            char[] chars = new char[i + 1];
+            for (int j = 0; j < i; j++) {
                 chars[j] = (char) ('A' + j);
             }
             // Print the characters as a string
