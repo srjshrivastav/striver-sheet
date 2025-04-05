@@ -25,6 +25,26 @@ public class Triangle {
         printEqTriangleRotated(n);
         System.out.println("\n");
         printRightTriangleAlternate(n);
+        System.out.println("\n");
+        printMShape(n);
+    }
+
+    private static void printMShape(int n) {
+        StringBuilder sb; // Using string builder for optimization purpose
+        for(int i=n;i>0;i--){
+            sb = new StringBuilder();
+            for(int j=1;j<=n*2;j++){
+                if(j> n-i +1 && j < n+i){
+                    sb.append(" ");
+                }else{
+                    if(j<=n)
+                        sb.append(j);
+                    else
+                        sb.append((n*2)-j+1);  
+                }
+            }
+            System.out.println(sb.toString());
+        }
     }
 
     private static void printRightTriangleAlternate(int n) {
