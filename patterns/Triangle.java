@@ -27,6 +27,21 @@ public class Triangle {
         printRightTriangleAlternate(n);
         System.out.println("\n");
         printMShape(n);
+        System.out.println("\n");
+        printTriangleWithContinousNumber(n);
+    }
+
+    private static void printTriangleWithContinousNumber(int n) {
+        int k = 1;
+        StringBuilder sb;
+        for(int i=1;i<=n;i++){
+            sb = new StringBuilder();
+            for(int j=1;j<=i;j++){
+                sb.append(k++);
+                sb.append(" ");
+            }
+            System.out.println(sb.toString());
+        }
     }
 
     private static void printMShape(int n) {
