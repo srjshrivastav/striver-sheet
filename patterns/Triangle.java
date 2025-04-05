@@ -33,9 +33,9 @@ public class Triangle {
 
     private static void printTriangleWithContinousNumber(int n) {
         int k = 1;
-        StringBuilder sb;
+        StringBuilder sb = new StringBuilder();
         for(int i=1;i<=n;i++){
-            sb = new StringBuilder();
+            sb.setLength(0);
             for(int j=1;j<=i;j++){
                 sb.append(k++);
                 sb.append(" ");
@@ -45,9 +45,9 @@ public class Triangle {
     }
 
     private static void printMShape(int n) {
-        StringBuilder sb; // Using string builder for optimization purpose
+        StringBuilder sb = new StringBuilder();// Using string builder for optimization purpose
         for(int i=n;i>0;i--){
-            sb = new StringBuilder();
+            sb.setLength(0);
             for(int j=1;j<=n*2;j++){
                 if(j> n-i +1 && j < n+i){
                     sb.append(" ");
