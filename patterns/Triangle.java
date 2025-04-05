@@ -23,6 +23,23 @@ public class Triangle {
         printRhombus(n);
         System.out.println("\n");
         printEqTriangleRotated(n);
+        System.out.println("\n");
+        printRightTriangleAlternate(n);
+    }
+
+    private static void printRightTriangleAlternate(int n) {
+        boolean one = true;
+        for(int i=0;i<n;i++){
+            one = i%2==0;
+            for(int j=0;j<=i;j++){
+                    if(one)
+                        System.out.print(1);
+                    else
+                        System.out.print(0);
+                    one = !one;
+            }
+            System.out.println();
+        }
     }
 
     private static void printRhombus(int n) {
