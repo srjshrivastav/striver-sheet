@@ -41,6 +41,33 @@ public class Triangle {
         printCarEqTiangle(n);
         System.out.println("\n");
         printHollowRhombus(n);
+        System.out.println("\n");
+        printDoubleM(n);
+    }
+
+
+    //Most Optmized
+    private static void printDoubleM(int n) {
+        int sq = n*2;
+        boolean t = false;
+        StringBuilder sb = new StringBuilder();
+        for(int i=0;-1<i;){
+            sb.setLength(0);
+            for(int j=0;j<sq;j++){
+                    if(j>i && j<sq-i-1){
+                        sb.append(" ");
+                    }else{
+                        sb.append("*");
+                    }
+            }
+            System.out.println(sb.toString());
+            if(i<n-1 && !t){
+                 i++;   
+            }else{
+                i--;
+                t=true;
+            }
+        }
     }
 
 
