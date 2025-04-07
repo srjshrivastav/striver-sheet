@@ -9,7 +9,6 @@ public class Helper {
         System.out.print("Enter an Integer ");
         int n = sc.nextInt();
         System.out.println("\n");
-        // sc.close();
         return n;
     }
 }

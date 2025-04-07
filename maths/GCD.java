@@ -5,7 +5,7 @@ import utils.Helper;
 public class GCD {
     public static void main(String[] args) {
         int first = Helper.getIntergerInput();
-        System.out.println("Second");
+        // System.out.println("Second");
         int second = Helper.getIntergerInput();
         System.out.println("GCD or HCF is :"+withoutRecursionGCD(first,second));
     }
