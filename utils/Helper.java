@@ -13,6 +13,13 @@ public class Helper {
         return n;
     }
 
+    public static String getStringInput(){
+        System.out.print("Enter a string ");
+        String n = sc.nextLine();
+        System.out.println("\n");
+        return n;
+    }
+
     public static void printList(List<Integer> array) {
         for(int i:array){
             System.out.print(i+", ");
