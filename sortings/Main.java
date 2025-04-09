@@ -7,6 +7,8 @@ public class Main {
         int[] arr = Helper.takeArrayInput();
         // Helper.printArray(Sort.selectionSort(arr));
         // Helper.printArray(Sort.bubbleSort(arr));
-        Helper.printArray(Sort.insertionSort(arr));
+        // Helper.printArray(Sort.insertionSort(arr));
+        Sort.mergeSort(arr);
+        Helper.printArray(arr);
     }
 }
