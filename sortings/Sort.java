@@ -44,4 +44,24 @@ public class Sort {
         }
         return arr;
     }
+
+    /**
+     * Insertion Sort: Set the current Element to Index I and swap the left elements till its right position
+     * @param arr
+     * @return
+     */
+    public static int[] insertionSort(int[] arr){
+        int temp;
+
+        for(int i=0;i<arr.length;i++){
+            for(int j=i;j>0;j--){
+                if(arr[j]<arr[j-1]){
+                        temp = arr[j];
+                        arr[j] = arr[j-1];
+                        arr[j-1] = temp;
+                }
+            }
+        }
+        return arr;
+    }
 }
