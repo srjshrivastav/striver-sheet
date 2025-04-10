@@ -8,7 +8,8 @@ public class Main {
         // Helper.printArray(Sort.selectionSort(arr));
         // Helper.printArray(Sort.bubbleSort(arr));
         // Helper.printArray(Sort.insertionSort(arr));
-        Sort.mergeSort(arr);
+        // Sort.mergeSort(arr);
+        Sort.recursiveBubbleSort(arr, arr.length);
         Helper.printArray(arr);
     }
 }

@@ -126,4 +126,18 @@ public class Sort {
             arr[k] = result[k - start];
         }
     }
+
+
+    public static void recursiveBubbleSort(int[]arr, int n){
+        if(n==0) return;
+        int temp;
+        for(int i = 1;i<n;i++){
+            if(arr[i-1]> arr[i]){
+                temp = arr[i-1];
+                arr[i-1]= arr[i];
+                arr[i] = temp;
+            }
+        }
+        recursiveBubbleSort(arr, n-1);
+    }
 }
