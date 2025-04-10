@@ -140,4 +140,52 @@ public class Sort {
         }
         recursiveBubbleSort(arr, n-1);
     }
+
+
+    public static void recursiveInsertionSort(int[]arr, int start){
+        if(start==arr.length) return;
+        int temp, i = start;
+        while(i > 0  && arr[i-1] > arr[i]){
+                temp = arr[i-1];
+                arr[i-1]= arr[i];
+                arr[i] = temp;
+                i--;
+        }
+        recursiveInsertionSort(arr, start+1);
+    }
+
+
+    public static void quickSort(int[] arr){
+        quickSort(arr, 0, arr.length-1);
+    }
+
+
+    private static int partition(int[] arr, int start, int end){
+        int pivot = arr[start];
+        int i =start, j=end, temp;
+        while(i<j){
+            while(i<end && arr[i]<=pivot){
+                i++;
+            }
+            while(j>start && arr[j]>=pivot){
+                j--;
+            }
+            if(i<j){
+                temp = arr[i];
+                arr[i]= arr[j];
+                arr[j]=temp;
+            }
+        }
+        temp = arr[j];
+        arr[j] = pivot;
+        arr[start] = temp;
+        return j;
+    }
+
+    private static void quickSort(int[] arr, int start, int end){
+        if(start>=end) return;
+        int pIndex = partition(arr, start, end);
+        quickSort(arr, start, pIndex-1);
+        quickSort(arr, pIndex+1, end);
+    }
 }
