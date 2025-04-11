@@ -30,7 +30,7 @@ public class Helper {
         System.out.println("Enter Array Eelements separated by space: ");
         String arr = sc.nextLine();
         String[] stringArray = arr.split(" ");
-        
+
         int[] intArray = new int[stringArray.length];
         for (int i = 0; i < stringArray.length; i++) {
             intArray[i] = Integer.parseInt(stringArray[i]);
@@ -43,6 +43,7 @@ public class Helper {
         for(int i=0;i<array.length;i++){
            System.out.print(array[i]+" ");
         }
+        System.out.println();
     }
 
     public static void swap2Number(int[] arr, int k, int j){
