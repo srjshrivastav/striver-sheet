@@ -40,4 +40,10 @@ public class Helper {
            System.out.print(array[i]+" ");
         }
     }
+
+    public static void swap2Number(int[] arr, int k, int j){
+        int temp = arr[k];
+        arr[k] = arr[j];
+        arr[j]=temp;
+    }
 }
