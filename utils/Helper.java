@@ -27,13 +27,17 @@ public class Helper {
     }
 
     public static int[] takeArrayInput() {
-        int n = getIntergerInput();
-        int[] array  = new int[n];
-        for(int i=0;i<n;i++){
-            array[i] = sc.nextInt();
+        System.out.println("Enter Array Eelements separated by space: ");
+        String arr = sc.nextLine();
+        String[] stringArray = arr.split(" ");
+        
+        int[] intArray = new int[stringArray.length];
+        for (int i = 0; i < stringArray.length; i++) {
+            intArray[i] = Integer.parseInt(stringArray[i]);
         }
-        return array;
+        return intArray;
     }
+    
 
     public static void printArray(int[] array) {
         for(int i=0;i<array.length;i++){
