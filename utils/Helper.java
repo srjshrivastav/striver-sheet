@@ -9,6 +9,7 @@ public class Helper {
     public static int getIntergerInput(){
         System.out.print("Enter an Integer ");
         int n = sc.nextInt();
+        sc.nextLine();
         System.out.println("\n");
         return n;
     }
