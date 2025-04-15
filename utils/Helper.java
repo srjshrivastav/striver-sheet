@@ -52,4 +52,11 @@ public class Helper {
         arr[k] = arr[j];
         arr[j]=temp;
     }
+
+    public static void printArray(int[] arr, int start, int end) {
+        for(int i=start;i<end;i++){
+            System.out.print(arr[i]+" ");
+         }
+         System.out.println();
+    }
 }
